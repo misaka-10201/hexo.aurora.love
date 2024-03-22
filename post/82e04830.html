@@ -1,0 +1,184 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Stable-Diffusion-webui和ml-SD的本地部署 | Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="由于网站遭受到了管理人的错误处理，珍贵资源未能得以保留，鲁迅说过，网站不能空无一文（？，故水文一篇，赖以充数（逃 部署前准备 科学上网 能不用Mac就不用Mac 做好看鬼图的心理准备（确信  ml-SD本来事先是想着直接上SD的，但找参考时看到了ml-SD的部署指南，本着走前人走过的路的精神，就先试试ml-SD吧 客观来说，ml-SD在Mac上是要比SD有足够的优势的，毕竟是Apple改过的能动用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Stable-Diffusion-webui和ml-SD的本地部署">
+<meta property="og:url" content="http://example.com/post/82e04830.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="由于网站遭受到了管理人的错误处理，珍贵资源未能得以保留，鲁迅说过，网站不能空无一文（？，故水文一篇，赖以充数（逃 部署前准备 科学上网 能不用Mac就不用Mac 做好看鬼图的心理准备（确信  ml-SD本来事先是想着直接上SD的，但找参考时看到了ml-SD的部署指南，本着走前人走过的路的精神，就先试试ml-SD吧 客观来说，ml-SD在Mac上是要比SD有足够的优势的，毕竟是Apple改过的能动用">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2023-02-17T19:07:58.000Z">
+<meta property="article:modified_time" content="2024-03-22T15:06:29.689Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="ml-stable-diffusion">
+<meta property="article:tag" content="Stable-Diffusion-webui">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/post/82e04830.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Stable-Diffusion-webui和ml-SD的本地部署',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-03-22 23:06:29'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">19</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">35</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">7</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Hexo"><span class="site-name">Hexo</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Stable-Diffusion-webui和ml-SD的本地部署</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-02-17T19:07:58.000Z" title="Created 2023-02-18 03:07:58">2023-02-18</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-03-22T15:06:29.689Z" title="Updated 2024-03-22 23:06:29">2024-03-22</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/ACG/">ACG</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Stable-Diffusion-webui和ml-SD的本地部署"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>由于网站遭受到了管理人的错误处理，珍贵资源未能得以保留，鲁迅说过，网站不能空无一文（？，故水文一篇，赖以充数（逃</p>
+<h2 id="部署前准备"><a href="#部署前准备" class="headerlink" title="部署前准备"></a>部署前准备</h2><ul>
+<li>科学上网</li>
+<li>能不用Mac就不用Mac</li>
+<li>做好看鬼图的心理准备（确信</li>
+</ul>
+<h2 id="ml-SD"><a href="#ml-SD" class="headerlink" title="ml-SD"></a>ml-SD</h2><p>本来事先是想着直接上SD的，但找参考时看到了ml-SD的<a target="_blank" rel="noopener" href="https://blog.csdn.net/soulteary/article/details/128269466">部署指南</a>，本着走前人走过的路的精神，就先试试ml-SD吧</p>
+<p>客观来说，ml-SD在Mac上是要比SD有足够的优势的，毕竟是Apple改过的能动用M系列GPU的，比后面部署的SD-webui单纯用CPU搁那里算可快太多了，苦于不会写ui（fvv没有去看，摆烂人实锤），在实际使用方面还是webui更舒适一些。</p>
+<h3 id="Conda安装"><a href="#Conda安装" class="headerlink" title="Conda安装"></a>Conda安装</h3><p>到<a target="_blank" rel="noopener" href="https://repo.anaconda.com/archive/">Conda官网</a>或<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/">镜像站</a>下载，下载完后执行安装，建议用<code>vi ~/.condarc</code>对其进行换源，保护后面下载时不至于血压升高（</p>
+<p>在完成 Conda 的安装之后，我们就可以用它来快速的创建不影响本地机器环境，只和项目关联的干净的 Python 运行环境了。</p>
+<h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">conda create -n coreml_stable_diffusion python=3.8 -y</span><br><span class="line">//初始化环境</span><br><span class="line">conda activate coreml_stable_diffusion</span><br><span class="line">//启动</span><br><span class="line">pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line">//安装程序依赖的软件包</span><br></pre></td></tr></table></figure>
+
+<h3 id="项目初始化"><a href="#项目初始化" class="headerlink" title="项目初始化"></a>项目初始化</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/apple/ml-stable-diffusion.git</span><br><span class="line">//拉库</span><br><span class="line">cd ml-stable-diffusion</span><br><span class="line">pip install -r requirements.txt</span><br><span class="line">//安装依赖</span><br></pre></td></tr></table></figure>
+
+<h3 id="模型转换"><a href="#模型转换" class="headerlink" title="模型转换"></a>模型转换</h3><p>现在我们有跑的环境了，缺少点来跑的model，上Huggingface注册一个账号，获取token后利用token登录，这样我们就可以从Huggingface上下载model了。和SD不一样，ml-SD好像只能运行转换格式后的model，我们需要转换 Huggingface 上的 PyTorch &#x2F; TF 开放模型到 Apple Core ML 模型格式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python -m python_coreml_stable_diffusion.torch2coreml --convert-unet --convert-text-encoder --convert-vae-decoder --convert-safety-checker -o ./models</span><br><span class="line">//默认下载CompVis/stable-diffusion-v1-4，如若想用其他模型，可自行添加--model-version参数</span><br></pre></td></tr></table></figure>
+
+<h3 id="生成图片及参数录入优化"><a href="#生成图片及参数录入优化" class="headerlink" title="生成图片及参数录入优化"></a>生成图片及参数录入优化</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python -m python_coreml_stable_diffusion.pipeline --prompt &quot;magic book on the table&quot; -i ./models -o ./output --compute-unit ALL --seed 93</span><br><span class="line">//画一本桌子上的魔法书</span><br></pre></td></tr></table></figure>
+
+<p>我们可以用gradio来创建一个 Web 界面，把 ML Stable Diffusion 的图片生成和 Web 界面“绑定”到一起（但不想看了，就没有后续力</p>
+<h3 id="感觉，快了，也没快多少（bushi"><a href="#感觉，快了，也没快多少（bushi" class="headerlink" title="感觉，快了，也没快多少（bushi"></a>感觉，快了，也没快多少（bushi</h3><p><img src="https://raw.githubusercontent.com/misaka-10201/img/main/00006-550923006.png"></p>
+<p>真不戳（赞赏</p>
+<h2 id="Stable-Diffusion-webui"><a href="#Stable-Diffusion-webui" class="headerlink" title="Stable-Diffusion-webui"></a>Stable-Diffusion-webui</h2><p>在玩了几次ml-SD后，愈发感觉指南里的web过于直白，给不了多少自由度，自己又不想自己写，于是便决定用现成的webui，正好<a target="_blank" rel="noopener" href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Installation-on-Apple-Silicon">官方文档</a>里也有对Apple单独的部署指导，实际部署起来感觉比ml-SD更顺畅（？</p>
+<h3 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">brew install cmake protobuf rust python@3.10 git wget</span><br><span class="line">//前置依赖</span><br><span class="line">git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui</span><br><span class="line">//拉库</span><br><span class="line">//放置下载的模型</span><br><span class="line">cd stable-diffusion-webui</span><br><span class="line">./webui.sh</span><br><span class="line">//运行</span><br></pre></td></tr></table></figure>
+
+<p>事先装好Homebrew</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://example.com">John Doe</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://example.com/post/82e04830.html">http://example.com/post/82e04830.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/ml-stable-diffusion/">ml-stable-diffusion</a><a class="post-meta__tags" href="/tags/Stable-Diffusion-webui/">Stable-Diffusion-webui</a></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/post/eeedc6e3.html" title="如何在iPhone上安装粉红色小软件（补救"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Previous</div><div class="prev_info">如何在iPhone上安装粉红色小软件（补救</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">19</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">35</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">7</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E5%89%8D%E5%87%86%E5%A4%87"><span class="toc-number">1.</span> <span class="toc-text">部署前准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ml-SD"><span class="toc-number">2.</span> <span class="toc-text">ml-SD</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Conda%E5%AE%89%E8%A3%85"><span class="toc-number">2.1.</span> <span class="toc-text">Conda安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="toc-number">2.2.</span> <span class="toc-text">环境准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">2.3.</span> <span class="toc-text">项目初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">2.4.</span> <span class="toc-text">模型转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E5%9B%BE%E7%89%87%E5%8F%8A%E5%8F%82%E6%95%B0%E5%BD%95%E5%85%A5%E4%BC%98%E5%8C%96"><span class="toc-number">2.5.</span> <span class="toc-text">生成图片及参数录入优化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%84%9F%E8%A7%89%EF%BC%8C%E5%BF%AB%E4%BA%86%EF%BC%8C%E4%B9%9F%E6%B2%A1%E5%BF%AB%E5%A4%9A%E5%B0%91%EF%BC%88bushi"><span class="toc-number">2.6.</span> <span class="toc-text">感觉，快了，也没快多少（bushi</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Stable-Diffusion-webui"><span class="toc-number">3.</span> <span class="toc-text">Stable-Diffusion-webui</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%87%E7%A8%8B"><span class="toc-number">3.1.</span> <span class="toc-text">过程</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/7f23af61.html" title="时隔一年多的Mastodon🦣再次搭建记录">时隔一年多的Mastodon🦣再次搭建记录</a><time datetime="2024-03-22T06:41:15.000Z" title="Created 2024-03-22 14:41:15">2024-03-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/5a5a2105.html" title="在青岛小麦岛上四处张望的灵梦">在青岛小麦岛上四处张望的灵梦</a><time datetime="2024-01-18T16:17:08.000Z" title="Created 2024-01-19 00:17:08">2024-01-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/d1404c7.html" title="Maples🍁in Qixia⛰️">Maples🍁in Qixia⛰️</a><time datetime="2024-01-18T15:46:26.000Z" title="Created 2024-01-18 23:46:26">2024-01-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/da12a90d.html" title="NUAA·雪">NUAA·雪</a><time datetime="2024-01-18T15:35:46.000Z" title="Created 2024-01-18 23:35:46">2024-01-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/45a1a561.html" title="镇江的猫猫🥰">镇江的猫猫🥰</a><time datetime="2023-11-07T13:31:13.000Z" title="Created 2023-11-07 21:31:13">2023-11-07</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -51,7 +51,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2024-03-22 22:39:35'
+  postUpdate: '2024-03-22 23:07:40'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -149,17 +149,152 @@
       }
       detectApple()
     })(window)</script><meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Hexo"><span class="site-name">Hexo</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/501db02.html" title="链接生成Test">链接生成Test</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-22T14:38:32.000Z" title="Created 2024-03-22 22:38:32">2024-03-22</time></span></div><div class="content">只是一篇test</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/4a17b156.html" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-22T13:23:44.297Z" title="Created 2024-03-22 21:23:44">2024-03-22</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">19</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">35</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">7</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Hexo"><span class="site-name">Hexo</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/7f23af61.html" title="时隔一年多的Mastodon🦣再次搭建记录">时隔一年多的Mastodon🦣再次搭建记录</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-22T06:41:15.000Z" title="Created 2024-03-22 14:41:15">2024-03-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/uncategorized/">uncategorized</a></span></div><div class="content">起因是同学找我有事,于是想着正好再搭一次mastodon,一开始也没觉得能出什么岔子(毕竟一年前搭的那是顺风顺水),于是便踩了个狠狠的大坑…
 
-More info: Writing
-Run server1$ hexo server
+[hidden]搭之前一定要好好的看官方文档和版本更新内容(〒︿〒),不然就会变成和小春一样的baka[&#x2F;hidden]
+基本流程参考的这位大佬的教程:如何利用Docker搭建Mastodon实例（一）：基础搭建篇,很详细,从头跟到尾一般就搭建完了,除非你用的是最新版本
+🐽实操满怀欣喜,一路没有报错的搭完了,打开站点一看啥问题没有,结果就是注册不了,直接给我整不会了,回看了一遍流程,确定没有错误后,开始排查原因
+一开始打算直接搜看看有没有同样的问题,找了一圈没见有(也可能我不会找),于是开始从流程上找
+首先确定邮箱能否正常发送,在初始化阶段有发送测试邮件的一步,教程里跳过了,我后来又试了一下,正常;而且管理员登录后更改密码或异地登录等操作都会收到邮件提示,证明SMTP服务是没有问题的,过…
+然后看mastodon版本,最🐽的一集,我想到可能是新版本里增加了什么设置导致默认无法在本地注册用户,但是…但是我没看官方更新日志里的内容而是 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/5a5a2105.html" title="在青岛小麦岛上四处张望的灵梦">在青岛小麦岛上四处张望的灵梦</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-01-18T16:17:08.000Z" title="Created 2024-01-19 00:17:08">2024-01-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Take-a-walk/">Take a walk</a></span></div><div class="content">
+BYD有人退哪天票买哪天票,我很难评
+岛去青岛没咋玩,毕竟景点感觉不是很多,外面还贼冷,它是那种,你把手揣兜里基本感觉不到冷,但是一掏出来拿相机拍照,一会就冻僵了__(:3 」∠ )_.
+海边确实有不一样的风景,也有不一样的风,第一次顶着落日时分的海风拍了个延时摄影,最后只能说: 很冷,但是值了(･ω´･ )
 
-More info: Server
-Generate static files1$ hexo generate
 
-More info: Generating
-Deploy to remote sites1$ hexo deploy
 
-More info: Deployment
-</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/501db02.html" title="链接生成Test">链接生成Test</a><time datetime="2024-03-22T14:38:32.000Z" title="Created 2024-03-22 22:38:32">2024-03-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/4a17b156.html" title="Hello World">Hello World</a><time datetime="2024-03-22T13:23:44.297Z" title="Created 2024-03-22 21:23:44">2024-03-22</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">March 2024</span><span class="card-archive-list-count">2</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">2</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-03-22T14:39:35.854Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+
+
+
+
+偶然拍到的一大哥((¦3[▓▓]
+
+校山大校区好偏ಠ_ಠ,也好大,校门口甚至还有个滨海公园,好大一片沙滩ಠ_ಠ,还得是人酒吧舞,同样是新建的分校区,咋你航就跟一寄宿制高中一样呢ಠ_ಠ
+不过山大食堂的面确实没我们那的好吃😋,量还少,这下属实南北逆差异了ﾟÅﾟ)
+
+
+
+
+应该能看出来是海鸥脚印吧(心虚öㅅö
+
+下一秒灵梦就倒在了沙滩上(乐
+有好多海鸥,但凡有颗大长焦,必然爽拍,但凡…但凡…( ͡° ͜ʖ ͡°)
+临走还把同学的校园卡揣走了(乐
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/d1404c7.html" title="Maples🍁in Qixia⛰️">Maples🍁in Qixia⛰️</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-01-18T15:46:26.000Z" title="Created 2024-01-18 23:46:26">2024-01-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Take-a-walk/">Take a walk</a></span></div><div class="content">看了看照片日期,这篇本应该在雪景之前的… 但是无所谓了,毕竟都是同一天穿、传上去的(诶嘿
+去拍的那天感冒还没好😷,感觉爬个小山都累的要死(´_ゝ`),再加上我特意凑工作日去玩,结果人还是多到离谱😓. 山上的枫叶是挺好看,但是离我预期的那种震撼还是有不小的落差.总之体验不佳,出片也少…
+以后说什么都不带病出门了( •́ὤ•̀)
+
+
+
+
+
+
+
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/da12a90d.html" title="NUAA·雪">NUAA·雪</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-01-18T15:35:46.000Z" title="Created 2024-01-18 23:35:46">2024-01-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Take-a-walk/">Take a walk</a></span></div><div class="content">好久前拍的了,毕竟临近毕业没怎么搞网站,攒了一大堆皂片没有po出来(不是因为懒
+但是有一说一,拜这次大寒潮所赐,南京(我们是溧阳)下了场好大的雪,除了冷🥶,没别的不好🥰
+
+
+
+这是异变啊灵梦(幻想万华镜幻视👀
+
+
+
+修的很烂(｡ŏ_ŏ),拍的一般(｡í _ ì｡),不如实景好看(´_ゝ`)
+
+估计几年内不会再见到这么大的雪了(悲
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/45a1a561.html" title="镇江的猫猫🥰">镇江的猫猫🥰</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-11-07T13:31:13.000Z" title="Created 2023-11-07 21:31:13">2023-11-07</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Take-a-walk/">Take a walk</a></span></div><div class="content">
+上周末被朋友邀请去了镇江,没去太多的地方,爽玩了两天,爽就爽在拍猫拍爽了🥰,金山寺的猫猫真的好乖,焦山里的猪咪也很上镜,最主要的是24120怼起来太爽了(告别2450的快乐(唯一的缺点是又重了好多😫
+
+
+
+
+
+
+
+
+还有相比之下没怎么出片的景区(
+
+
+
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/25b17150.html" title="日上海&amp;夜长沙">日上海&amp;夜长沙</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-10-14T20:04:03.000Z" title="Created 2023-10-15 04:04:03">2023-10-15</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Take-a-walk/">Take a walk</a></span></div><div class="content">杂乱无章的行程虽说考雅思是一件大事,最后成绩出来时也确实过了,但是我确实没信心说是因为备考雅思而没有提前做好旅行攻略.等到假期前一天我才意识到,“坏了😨,没买票呢!”
+翻遍了各平台找攻略,从B站翻到小红书,从打卡地找到City Walk,从沈阳大街看到广州漫展…我逐渐意识到:我的选择取决于还能买到去哪的票😢
+
+
+那就有哪的票就去哪吧🚞
+
+
+上海
+•ࡇ•不是第一次来上海了,这次愁于去哪玩时,想起来上海的各种馆都还没去过,一搜,好嘛,预约全满😵,又想了想要不找个漫展去拍coser🥰,不出意料的票早已售罄😭（甚至巨人快闪店直接取消了🤨）…最后定到了国家地理展和上海电影博物馆的.
+也是去了经典的景点的,而且还又去了百联ZX和第一百货买谷🤤,虽然所谓的国内秋叶原浓度确实不低,但是和真正的Akihabara相比还是差的太远了.不过百联ZX里竟然还有东方周边,狠狠的购入两件痛衣(-216💳).
+
+ᕙ(`▿´)ᕗ当天粜之前还去了更有浓度的地方👉
+车车人聚会现场(喜,周边很多啊很多,店里也有很多fumo😍,可惜我的妖梦现在还是处于立牌阶段(悲,被降维打击了😢
+刚进店里就有一只妖梦 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/a7faaa19.html" title="我超,缘!">我超,缘!</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-26T15:43:09.000Z" title="Created 2023-08-26 23:43:09">2023-08-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Take-a-walk/">Take a walk</a></span></div><div class="content">[hidden]这下狠狠的圣地巡礼了😋[&#x2F;hidden]
+
+八幡宫
+
+
+
+触手怪们的绘马🥺
+
+
+
+
+
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/75ec601e.html" title="杭州植物园&amp;某条街">杭州植物园&amp;某条街</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-26T15:25:14.000Z" title="Created 2023-08-26 23:25:14">2023-08-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Take-a-walk/">Take a walk</a></span></div><div class="content">
+
+
+
+
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/25e55a24.html" title="Japan Travel⛩️">Japan Travel⛩️</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-26T15:16:38.000Z" title="Created 2023-08-26 23:16:38">2023-08-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Take-a-walk/">Take a walk</a></span></div><div class="content">时间线[timeline]2023-8-4Osaka道顿堀心斋桥2023-8-5Nara🚉Osaka奈良公园淀川花火大会🎆2023-8-6Nara京都御所玉子市场清水寺⛩️二年坂三年坂鸭川纳凉祭京都塔🗼2023-8-7Nara伏见稻荷大社⛩️白须神社⛩️2023-8-8Nara🚄Izu白滨海岸🏖️2023-8-9Izu🌧️2023-8-10Izu🚄Kamakura大室山⛰️江岛神社⛩️镰仓高校前站2023-8-11Kamakura🚉Tokyo江之岛Akihabara2023-8-12Tokyo-Shibuya江户城🚫银座Shibuya sky下北泽Akihabara歌舞伎町2023-8-13Tokyo-C102💵2023-8-14Tokyo-Akihabara池袋🚹🚫女仆咖啡厅@home2023-8-15Tokyo-Ashikagashi八幡宫⛩️圣地巡礼浅草2023-8-16Japan✈️China👋[&#x2F;timeline]
+记录·📷大阪
+
+
+
+京都
+
+
+
+
+
+
+
+
+
+
+
+
+
+伊豆
+
+
+
+东京
+
+[hidden]还有好多,但都是漫展上拍的coser ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/263e1d83.html" title="五一🪖">五一🪖</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-05-03T18:54:33.000Z" title="Created 2023-05-04 02:54:33">2023-05-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Take-a-walk/">Take a walk</a></span></div><div class="content">魔都
+
+
+
+
+
+
+
+
+
+京津(乱调
+
+
+
+
+
+
+
+
+</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">19</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">35</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">7</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/7f23af61.html" title="时隔一年多的Mastodon🦣再次搭建记录">时隔一年多的Mastodon🦣再次搭建记录</a><time datetime="2024-03-22T06:41:15.000Z" title="Created 2024-03-22 14:41:15">2024-03-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/5a5a2105.html" title="在青岛小麦岛上四处张望的灵梦">在青岛小麦岛上四处张望的灵梦</a><time datetime="2024-01-18T16:17:08.000Z" title="Created 2024-01-19 00:17:08">2024-01-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/d1404c7.html" title="Maples🍁in Qixia⛰️">Maples🍁in Qixia⛰️</a><time datetime="2024-01-18T15:46:26.000Z" title="Created 2024-01-18 23:46:26">2024-01-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/da12a90d.html" title="NUAA·雪">NUAA·雪</a><time datetime="2024-01-18T15:35:46.000Z" title="Created 2024-01-18 23:35:46">2024-01-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/45a1a561.html" title="镇江的猫猫🥰">镇江的猫猫🥰</a><time datetime="2023-11-07T13:31:13.000Z" title="Created 2023-11-07 21:31:13">2023-11-07</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/ACG/"><span class="card-category-list-name">ACG</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/ACG-Comics/"><span class="card-category-list-name">ACG - Comics</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/ACG-Game/"><span class="card-category-list-name">ACG - Game</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Take-a-walk/"><span class="card-category-list-name">Take a walk</span><span class="card-category-list-count">13</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/acg/"><span class="card-category-list-name">acg</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/acg/Game/"><span class="card-category-list-name">Game</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/uncategorized/"><span class="card-category-list-name">uncategorized</span><span class="card-category-list-count">1</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/%E9%97%B2%E9%80%9B/" style="font-size: 1.5em; color: #99a9bf">闲逛</a> <a href="/tags/ml-stable-diffusion/" style="font-size: 1.1em; color: #999">ml-stable-diffusion</a> <a href="/tags/%E5%B1%B1%E4%B8%9C%E5%A4%A7%E5%AD%A6/" style="font-size: 1.1em; color: #999">山东大学</a> <a href="/tags/%E6%A0%96%E9%9C%9E%E5%B1%B1/" style="font-size: 1.1em; color: #999">栖霞山</a> <a href="/tags/Japan/" style="font-size: 1.23em; color: #999ea6">Japan</a> <a href="/tags/Stable-Diffusion-webui/" style="font-size: 1.1em; color: #999">Stable-Diffusion-webui</a> <a href="/tags/OmoFun/" style="font-size: 1.1em; color: #999">OmoFun</a> <a href="/tags/%E7%A6%81%E6%BC%AB/" style="font-size: 1.1em; color: #999">禁漫</a> <a href="/tags/%E6%A4%8D%E7%89%A9%E5%9B%AD/" style="font-size: 1.1em; color: #999">植物园</a> <a href="/tags/%E5%A4%A9%E6%B4%A5/" style="font-size: 1.1em; color: #999">天津</a> <a href="/tags/Galgame/" style="font-size: 1.1em; color: #999">Galgame</a> <a href="/tags/%E6%97%85%E3%81%8B%E3%81%88%E3%82%8B/" style="font-size: 1.1em; color: #999">旅かえる</a> <a href="/tags/%E9%9B%AA%E2%9D%84%EF%B8%8F/" style="font-size: 1.1em; color: #999">雪❄️</a> <a href="/tags/%E5%8C%97%E4%BA%AC/" style="font-size: 1.1em; color: #999">北京</a> <a href="/tags/%E9%95%BF%E6%B2%99/" style="font-size: 1.1em; color: #999">长沙</a> <a href="/tags/%E6%9D%AD%E5%B7%9E/" style="font-size: 1.1em; color: #999">杭州</a> <a href="/tags/Sakura/" style="font-size: 1.1em; color: #999">Sakura</a> <a href="/tags/bika/" style="font-size: 1.1em; color: #999">bika</a> <a href="/tags/%E4%B8%8A%E6%B5%B7/" style="font-size: 1.23em; color: #999ea6">上海</a> <a href="/tags/%E7%BC%98%E3%81%AE%E7%A9%BA/" style="font-size: 1.23em; color: #999ea6">缘の空</a> <a href="/tags/mastodon/" style="font-size: 1.1em; color: #999">mastodon</a> <a href="/tags/%E5%8D%97%E4%BA%AC/" style="font-size: 1.37em; color: #99a4b2">南京</a> <a href="/tags/wineskin/" style="font-size: 1.1em; color: #999">wineskin</a> <a href="/tags/%E9%95%BF%E5%B9%BF%E6%BA%AA%E6%B9%BF%E5%9C%B0%E5%85%AC%E5%9B%AD/" style="font-size: 1.1em; color: #999">长广溪湿地公园</a> <a href="/tags/%E5%B0%8F%E9%BA%A6%E5%B2%9B/" style="font-size: 1.1em; color: #999">小麦岛</a> <a href="/tags/%E9%9D%92%E5%B2%9B/" style="font-size: 1.1em; color: #999">青岛</a> <a href="/tags/Onscripter/" style="font-size: 1.1em; color: #999">Onscripter</a> <a href="/tags/%E9%95%87%E6%B1%9F/" style="font-size: 1.1em; color: #999">镇江</a> <a href="/tags/%E8%A1%A5%E6%95%91/" style="font-size: 1.1em; color: #999">补救</a> <a href="/tags/%E4%B9%B1%E9%80%9B/" style="font-size: 1.37em; color: #99a4b2">乱逛</a> <a href="/tags/%E9%87%8D%E5%BA%86/" style="font-size: 1.1em; color: #999">重庆</a> <a href="/tags/%E6%BA%A7%E9%98%B3/" style="font-size: 1.1em; color: #999">溧阳</a> <a href="/tags/%E4%B8%9C%E6%96%B9/" style="font-size: 1.1em; color: #999">东方</a> <a href="/tags/%E6%97%A0%E9%94%A1/" style="font-size: 1.1em; color: #999">无锡</a> <a href="/tags/%E6%9E%AB%E5%8F%B6/" style="font-size: 1.1em; color: #999">枫叶</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">March 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/01/"><span class="card-archive-list-date">January 2024</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">November 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/10/"><span class="card-archive-list-date">October 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">August 2023</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">May 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">March 2023</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/02/"><span class="card-archive-list-date">February 2023</span><span class="card-archive-list-count">3</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">19</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-03-22T15:07:40.092Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

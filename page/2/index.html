@@ -1,0 +1,323 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/page/2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/page/2/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hexo',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-03-22 23:07:40'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">19</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">35</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">7</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Hexo"><span class="site-name">Hexo</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/8002f382.html" title="江南大学&amp;长广溪湿地公园&amp;南长街">江南大学&amp;长广溪湿地公园&amp;南长街</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-03-26T15:36:26.000Z" title="Created 2023-03-26 23:36:26">2023-03-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Take-a-walk/">Take a walk</a></span></div><div class="content">iPhone真难用啊,赶紧入相机啊啊啊啊啊啊😡
+
+紫叶李·幸福&#x2F;积极&#x2F;向上
+
+东京樱花·生命
+
+沙梨·纯真
+
+西府海棠·单恋
+
+绣球·希望&#x2F;健康&#x2F;有耐力的爱情&#x2F;骄傲&#x2F;冷爱&#x2F;美满&#x2F;团圆
+
+白晶菊
+
+蓬蘽
+
+
+
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/981fdb07.html" title="如何在Mac上推galgame（ONS）">如何在Mac上推galgame（ONS）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-03-17T06:52:58.000Z" title="Created 2023-03-17 14:52:58">2023-03-17</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/ACG-Game/">ACG - Game</a></span></div><div class="content">这几天属实闲的无聊，舍友的卧龙也打腻了。突然想着找几部galgame推一推，就比如美少女万拔镜（一部都没推过，久仰大名）仔细想想之前推过的gal确实不多，或者说是寥寥无几，至于为什么还惦记着推几部，可能是因为启蒙作是R18G类型的吧（笑（或者说还得是老东西够劲儿
+之前在安卓上都是用krkr2，这次具体来说也没细找，好像是记得Mac上没有krkr，正好还有ons，一搜Mac还真能用，好多大作也都能玩（xx鸣泣之时），于是就愉快的开始ctrl到底了（bushi
+
+过程
+安装官方ons
+ons-GBK
+launcher
+ons的galgame资源
+ctrl（或者直接看CG
+
+官方ons安装首先，要有brew…
+然后，在terminal里执行
+1brew install onscripter
+
+等安装完就好了…
+这时你找到路径（一般是/opt/homebrew/Cellar/onscripter/20220816_1/bin)，把onscripter拖到gal资源的文件夹里一般就能开始玩了，但是官方的并不支持中文…
+除非你啃生肉，而且还是找到的生肉资源，不然文字部分一般都会是乱码，这时我们就要 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/2477713e.html" title="鸡鸣寺&amp;玄武湖&amp;中山植物园🌸">鸡鸣寺&amp;玄武湖&amp;中山植物园🌸</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-03-11T18:25:56.000Z" title="Created 2023-03-12 02:25:56">2023-03-12</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Take-a-walk/">Take a walk</a></span></div><div class="content">鸡鸣寺
+东京樱花·生命
+
+东京樱花
+
+东京樱花
+
+东京樱花
+
+东京樱花
+
+山樱花
+玄武湖
+诸葛菜
+
+金钟花·隐藏在心中的爱
+
+诸葛菜
+
+野迎春·希望&#x2F;相爱到永远
+
+婆婆纳
+
+蒲公英·无法停留的爱&#x2F;随风飘远
+
+阿拉伯婆婆纳·健康
+
+美人梅·我的心只属于你&#x2F;我只愿跟随你
+
+紫叶李·幸福&#x2F;向上&#x2F;积极
+中山植物园
+繁缕·恩惠
+
+芥菜
+
+蔓长春花
+
+钟花樱桃·纯洁&#x2F;高洁&#x2F;别无所爱
+
+钟花樱桃
+
+迎春樱桃
+
+黄水仙·神秘&#x2F;尊敬&#x2F;等待你&#x2F;不求爱情&#x2F;友好
+
+迎春樱桃
+
+毛樱桃·精神恋爱
+
+单瓣李叶绣线菊
+
+麻栗坡兜兰
+
+彩云兜兰
+
+杏黄兜兰
+
+紫毛兜兰
+
+蝴蝶兰（台湾蝴蝶兰）
+
+卡特兰·敬爱&#x2F;仰慕
+
+海南钻喙兰
+
+海南钻喙兰
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/d68660d5.html" title="旅かえる">旅かえる</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-03-05T16:08:28.000Z" title="Created 2023-03-06 00:08:28">2023-03-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/ACG/">ACG</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/acg/">acg</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/acg/Game/">Game</a></span></div><div class="content">
+
+
+
+
+
+
+
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/42c4718b.html" title="燕山公园&amp;夫子庙">燕山公园&amp;夫子庙</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-03-05T15:59:26.000Z" title="Created 2023-03-05 23:59:26">2023-03-05</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Take-a-walk/">Take a walk</a></span></div><div class="content">
+
+
+
+
+
+
+
+
+
+
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/c6afcc96.html" title="山城步道&amp;洪崖洞">山城步道&amp;洪崖洞</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-03-05T15:40:18.000Z" title="Created 2023-03-05 23:40:18">2023-03-05</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Take-a-walk/">Take a walk</a></span></div><div class="content">
+
+
+
+
+
+
+
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/4a72f5c3.html" title="用wineskin在Mac上打车万（补救">用wineskin在Mac上打车万（补救</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-02-23T14:39:52.000Z" title="Created 2023-02-23 22:39:52">2023-02-23</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/ACG-Game/">ACG - Game</a></span></div><div class="content">起因可能是最近在Apple Music上听的东方的歌太多了，没事就听没事就听，然后突然想起来，正好闲的没事，原也不想原，搭方块也不想搭方块，那就不如来打飞机吧（bushi）
+其实是为了听歌（确信
+感谢贴吧老哥这里是用到的工具或资源列表，也是真的离谱，14年的资源现在拿出来还能接着用…还得是贴吧老哥
+
+贴吧老哥分享的dmg资源：链接
+wineskin：链接
+如果你是M系列的Mac，你还需要安装一下resetta2
+最好不要是最新版本操作系统（本文为Ventura13.0.1
+
+获取资源实现原理很简单，就是在Mac上用wineskin造一个能运行exe的Windows必要环境，wineskin官方在GitHub上也指出了M系列Mac使用的注意事项。至于为什么不用crossover，首先那玩意要钱，其次，那玩意要钱，就算找到了学习版，crossover是在你的Mac环境下直接创建了一个完整的Windows环境，确实可以干很多事情，但是相应的占用资源也增多了不少。我们只是为了打车万，没必要在你的Mac上再整一台Win出来（大概
+先把老哥的分享和wineskin下载下来。
+老哥的分享里都是东方正 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/eeedc6e3.html" title="如何在iPhone上安装粉红色小软件（补救">如何在iPhone上安装粉红色小软件（补救</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-02-23T14:06:21.000Z" title="Created 2023-02-23 22:06:21">2023-02-23</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/ACG-Comics/">ACG - Comics</a></span></div><div class="content">突然色色（不是昨天晚上突然看到电报群里发了哔咔企业版签名的链接，看过什么都不用操作就能直接安装后便果断安装了（喜第一次在iPhone上看哔咔还是在第一代se上，用的TestFlight，当时感觉非常的奇妙。现在换成了只比se大一小圈的13mini，看起来就是当时那个味。然后过了没一个小时，证书寄了（笑。
+于是便打算用自签，虽然需要七天一续比较麻烦，但至少比等企业签要好，能用毕竟。
+其实早就看到了哔咔上自签的教程，当时觉得无所谓，又不是必须看漫画，还有七天的期限，又是需要越狱什么的，就没弄。
+现在看了看，爱思据说寄的签不上，剩下的基本都是不需越狱的路子，于是就中午整了一下，挺顺利的，就是踩了点小坑…
+
+确实没什么好搞的，感觉应该也没什么坑，我基本应该都踩了…这里是官方指导文档，全面多了…下面是个人踩了的坑与较详细安装过程（逃
+
+事先准备大体步骤如下：
+
+准备好哔咔的ipa文件
+自己的Apple ID和密码
+sideloadly
+安装
+色色，启动！
+
+Sideloadly安装完可能会有这么一个error：
+1Local Anisette init fail: Sideloadly&#x27 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/82e04830.html" title="Stable-Diffusion-webui和ml-SD的本地部署">Stable-Diffusion-webui和ml-SD的本地部署</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-02-17T19:07:58.000Z" title="Created 2023-02-18 03:07:58">2023-02-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/ACG/">ACG</a></span></div><div class="content">由于网站遭受到了管理人的错误处理，珍贵资源未能得以保留，鲁迅说过，网站不能空无一文（？，故水文一篇，赖以充数（逃
+部署前准备
+科学上网
+能不用Mac就不用Mac
+做好看鬼图的心理准备（确信
+
+ml-SD本来事先是想着直接上SD的，但找参考时看到了ml-SD的部署指南，本着走前人走过的路的精神，就先试试ml-SD吧
+客观来说，ml-SD在Mac上是要比SD有足够的优势的，毕竟是Apple改过的能动用M系列GPU的，比后面部署的SD-webui单纯用CPU搁那里算可快太多了，苦于不会写ui（fvv没有去看，摆烂人实锤），在实际使用方面还是webui更舒适一些。
+Conda安装到Conda官网或镜像站下载，下载完后执行安装，建议用vi ~/.condarc对其进行换源，保护后面下载时不至于血压升高（
+在完成 Conda 的安装之后，我们就可以用它来快速的创建不影响本地机器环境，只和项目关联的干净的 Python 运行环境了。
+环境准备123456conda create -n coreml_stable_diffusion python=3.8 -y//初始化环境conda activate ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">19</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">35</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">7</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/7f23af61.html" title="时隔一年多的Mastodon🦣再次搭建记录">时隔一年多的Mastodon🦣再次搭建记录</a><time datetime="2024-03-22T06:41:15.000Z" title="Created 2024-03-22 14:41:15">2024-03-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/5a5a2105.html" title="在青岛小麦岛上四处张望的灵梦">在青岛小麦岛上四处张望的灵梦</a><time datetime="2024-01-18T16:17:08.000Z" title="Created 2024-01-19 00:17:08">2024-01-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/d1404c7.html" title="Maples🍁in Qixia⛰️">Maples🍁in Qixia⛰️</a><time datetime="2024-01-18T15:46:26.000Z" title="Created 2024-01-18 23:46:26">2024-01-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/da12a90d.html" title="NUAA·雪">NUAA·雪</a><time datetime="2024-01-18T15:35:46.000Z" title="Created 2024-01-18 23:35:46">2024-01-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/45a1a561.html" title="镇江的猫猫🥰">镇江的猫猫🥰</a><time datetime="2023-11-07T13:31:13.000Z" title="Created 2023-11-07 21:31:13">2023-11-07</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/ACG/"><span class="card-category-list-name">ACG</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/ACG-Comics/"><span class="card-category-list-name">ACG - Comics</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/ACG-Game/"><span class="card-category-list-name">ACG - Game</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Take-a-walk/"><span class="card-category-list-name">Take a walk</span><span class="card-category-list-count">13</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/acg/"><span class="card-category-list-name">acg</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/acg/Game/"><span class="card-category-list-name">Game</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/uncategorized/"><span class="card-category-list-name">uncategorized</span><span class="card-category-list-count">1</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/%E9%97%B2%E9%80%9B/" style="font-size: 1.5em; color: #99a9bf">闲逛</a> <a href="/tags/ml-stable-diffusion/" style="font-size: 1.1em; color: #999">ml-stable-diffusion</a> <a href="/tags/%E5%B1%B1%E4%B8%9C%E5%A4%A7%E5%AD%A6/" style="font-size: 1.1em; color: #999">山东大学</a> <a href="/tags/%E6%A0%96%E9%9C%9E%E5%B1%B1/" style="font-size: 1.1em; color: #999">栖霞山</a> <a href="/tags/Japan/" style="font-size: 1.23em; color: #999ea6">Japan</a> <a href="/tags/Stable-Diffusion-webui/" style="font-size: 1.1em; color: #999">Stable-Diffusion-webui</a> <a href="/tags/OmoFun/" style="font-size: 1.1em; color: #999">OmoFun</a> <a href="/tags/%E7%A6%81%E6%BC%AB/" style="font-size: 1.1em; color: #999">禁漫</a> <a href="/tags/%E6%A4%8D%E7%89%A9%E5%9B%AD/" style="font-size: 1.1em; color: #999">植物园</a> <a href="/tags/%E5%A4%A9%E6%B4%A5/" style="font-size: 1.1em; color: #999">天津</a> <a href="/tags/Galgame/" style="font-size: 1.1em; color: #999">Galgame</a> <a href="/tags/%E6%97%85%E3%81%8B%E3%81%88%E3%82%8B/" style="font-size: 1.1em; color: #999">旅かえる</a> <a href="/tags/%E9%9B%AA%E2%9D%84%EF%B8%8F/" style="font-size: 1.1em; color: #999">雪❄️</a> <a href="/tags/%E5%8C%97%E4%BA%AC/" style="font-size: 1.1em; color: #999">北京</a> <a href="/tags/%E9%95%BF%E6%B2%99/" style="font-size: 1.1em; color: #999">长沙</a> <a href="/tags/%E6%9D%AD%E5%B7%9E/" style="font-size: 1.1em; color: #999">杭州</a> <a href="/tags/Sakura/" style="font-size: 1.1em; color: #999">Sakura</a> <a href="/tags/bika/" style="font-size: 1.1em; color: #999">bika</a> <a href="/tags/%E4%B8%8A%E6%B5%B7/" style="font-size: 1.23em; color: #999ea6">上海</a> <a href="/tags/%E7%BC%98%E3%81%AE%E7%A9%BA/" style="font-size: 1.23em; color: #999ea6">缘の空</a> <a href="/tags/mastodon/" style="font-size: 1.1em; color: #999">mastodon</a> <a href="/tags/%E5%8D%97%E4%BA%AC/" style="font-size: 1.37em; color: #99a4b2">南京</a> <a href="/tags/wineskin/" style="font-size: 1.1em; color: #999">wineskin</a> <a href="/tags/%E9%95%BF%E5%B9%BF%E6%BA%AA%E6%B9%BF%E5%9C%B0%E5%85%AC%E5%9B%AD/" style="font-size: 1.1em; color: #999">长广溪湿地公园</a> <a href="/tags/%E5%B0%8F%E9%BA%A6%E5%B2%9B/" style="font-size: 1.1em; color: #999">小麦岛</a> <a href="/tags/%E9%9D%92%E5%B2%9B/" style="font-size: 1.1em; color: #999">青岛</a> <a href="/tags/Onscripter/" style="font-size: 1.1em; color: #999">Onscripter</a> <a href="/tags/%E9%95%87%E6%B1%9F/" style="font-size: 1.1em; color: #999">镇江</a> <a href="/tags/%E8%A1%A5%E6%95%91/" style="font-size: 1.1em; color: #999">补救</a> <a href="/tags/%E4%B9%B1%E9%80%9B/" style="font-size: 1.37em; color: #99a4b2">乱逛</a> <a href="/tags/%E9%87%8D%E5%BA%86/" style="font-size: 1.1em; color: #999">重庆</a> <a href="/tags/%E6%BA%A7%E9%98%B3/" style="font-size: 1.1em; color: #999">溧阳</a> <a href="/tags/%E4%B8%9C%E6%96%B9/" style="font-size: 1.1em; color: #999">东方</a> <a href="/tags/%E6%97%A0%E9%94%A1/" style="font-size: 1.1em; color: #999">无锡</a> <a href="/tags/%E6%9E%AB%E5%8F%B6/" style="font-size: 1.1em; color: #999">枫叶</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">March 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/01/"><span class="card-archive-list-date">January 2024</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">November 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/10/"><span class="card-archive-list-date">October 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">August 2023</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">May 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">March 2023</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/02/"><span class="card-archive-list-date">February 2023</span><span class="card-archive-list-count">3</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">19</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-03-22T15:07:40.092Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
