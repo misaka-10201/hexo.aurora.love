@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-03-23T12:58:23.800Z</updated>
+  <updated>2024-03-31T09:15:02.061Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/post/7f23af61.html"/>
     <id>http://example.com/post/7f23af61.html</id>
     <published>2024-03-22T06:41:15.000Z</published>
-    <updated>2024-03-23T12:58:23.800Z</updated>
+    <updated>2024-03-31T09:15:02.061Z</updated>
     
     <content type="html"><![CDATA[<p>起因是同学找我有事,于是想着正好再搭一次mastodon,一开始也没觉得能出什么岔子(毕竟一年前搭的那是顺风顺水),于是便踩了个狠狠的大坑…</p><p><img src="https://raw.githubusercontent.com/misaka-10201/img/main/oWfGXK2k-wallha.com.jpg"></p><p>[hidden]搭之前一定要好好的看官方文档和版本更新内容(〒︿〒),不然就会变成和小春一样的baka[&#x2F;hidden]</p><h2 id="基本流程"><a href="#基本流程" class="headerlink" title="基本流程"></a>基本流程</h2><p>参考的这位大佬的教程:<a href="https://pullopen.github.io/%E5%9F%BA%E7%A1%80%E6%90%AD%E5%BB%BA/2020/10/19/Mastodon-on-Docker.html">如何利用Docker搭建Mastodon实例（一）：基础搭建篇</a>,很详细,从头跟到尾一般就搭建完了,除非你用的是最新版本</p><h2 id="🐽实操"><a href="#🐽实操" class="headerlink" title="🐽实操"></a>🐽实操</h2><p>满怀欣喜,一路没有报错的搭完了,打开站点一看啥问题没有,结果就是注册不了,直接给我整不会了,回看了一遍流程,确定没有错误后,开始排查原因</p><p>一开始打算直接搜看看有没有同样的问题,找了一圈没见有(也可能我不会找),于是开始从流程上找</p><p>首先确定邮箱能否正常发送,在初始化阶段有发送测试邮件的一步,教程里跳过了,我后来又试了一下,正常;而且管理员登录后更改密码或异地登录等操作都会收到邮件提示,证明SMTP服务是没有问题的,过…</p><p>然后看mastodon版本,最🐽的一集,我想到可能是新版本里增加了什么设置导致默认无法在本地注册用户,但是…但是我没看官方更新日志里的内容而是随便挑了一个旧版本重装了一下,因为我印象里上一次搭建的时候并没有遇到本地未开放注册的情况,惯性思维的以为只是最近新加上的设置,这也导致之后一系列无用功的出现(给自己一拳👊</p><p>实在没办法了,便盯上了官方文档,抱着有中文我为什么要去啃原版的心理,我放弃了教程跟着翻译后的文档重搭建了一遍,仍然是用的最新版(呵),不出所料的过程里没有报错,最后依然无法注册😃<br>此刻我整个人是崩溃又懵逼的(☍﹏⁰)</p><p><img src="https://raw.githubusercontent.com/misaka-10201/img/main/%E6%88%AA%E5%B1%8F2024-03-09%20%E4%B8%8A%E5%8D%8810.37.41.png"></p><h2 id="幡然醒悟"><a href="#幡然醒悟" class="headerlink" title="幡然醒悟"></a>幡然醒悟</h2><p>最后,从B站看到有个up也有发的搭建视频,正好人正在直播,我试着联系了一下,大佬答应了帮我看看,也说可能是版本的问题,让我装个旧版本可能就解决了…</p><p>于是我抱着死马当活马医的心态,直接整了个一年前的版本3.5.12又试了一遍…<br>然后就解决了…<br>聪明的智商又占领高地了(●▼●;)</p><p>up看完后也跟我说了更新日志的变更</p><p><img src="https://raw.githubusercontent.com/misaka-10201/img/main/%E6%88%AA%E5%B1%8F2024-03-22%20%E4%B8%8B%E5%8D%882.31.07.png"></p><h2 id="结"><a href="#结" class="headerlink" title="结"></a>结</h2><p>赫赫😃,我是🐽</p>]]></content>
     
@@ -34,7 +34,7 @@
     
     
     
-    <category term="uncategorized" scheme="http://example.com/categories/uncategorized/"/>
+    <category term="Experience" scheme="http://example.com/categories/Experience/"/>
     
     
     <category term="mastodon" scheme="http://example.com/tags/mastodon/"/>
@@ -333,7 +333,7 @@
     <link href="http://example.com/post/981fdb07.html"/>
     <id>http://example.com/post/981fdb07.html</id>
     <published>2023-03-17T06:52:58.000Z</published>
-    <updated>2024-03-23T13:39:51.550Z</updated>
+    <updated>2024-03-31T09:18:31.878Z</updated>
     
     <content type="html"><![CDATA[<p>这几天属实闲的无聊，舍友的卧龙也打腻了。突然想着找几部galgame推一推，就比如美少女万拔镜（一部都没推过，久仰大名）仔细想想之前推过的gal确实不多，或者说是寥寥无几，至于为什么还惦记着推几部，可能是因为启蒙作是R18G类型的吧（笑<br>（或者说还得是老东西够劲儿</p><p>之前在安卓上都是用krkr2，这次具体来说也没细找，好像是记得Mac上没有krkr，正好还有ons，一搜Mac还真能用，好多大作也都能玩（xx鸣泣之时），于是就愉快的开始ctrl到底了（bushi</p><p><img src="https://raw.githubusercontent.com/misaka-10201/img/main/83691218_p0.jpg"></p><h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><ol><li>安装官方ons</li><li>ons-GBK</li><li>launcher</li><li>ons的galgame资源</li><li>ctrl（或者直接看CG</li></ol><h2 id="官方ons安装"><a href="#官方ons安装" class="headerlink" title="官方ons安装"></a>官方ons安装</h2><p>首先，要有brew…</p><p>然后，在terminal里执行</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install onscripter</span><br></pre></td></tr></table></figure><p>等安装完就好了…</p><p>这时你找到路径（一般是<code>/opt/homebrew/Cellar/onscripter/20220816_1/bin</code>)，把onscripter拖到gal资源的文件夹里一般就能开始玩了，但是官方的并不支持中文…</p><p>除非你啃生肉，而且还是找到的生肉资源，不然文字部分一般都会是乱码，这时我们就要搞下一步的ONS-GBK</p><h2 id="ons-GBK"><a href="#ons-GBK" class="headerlink" title="ons-GBK"></a>ons-GBK</h2><p><a href="https://github.com/ljkgpxs/onscripter-GBK-2015">Onscripter中文支持版，根据20150820版修改而来</a>，下载源码，随后在终端里cd到解压后的文件夹里，执行</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make -f Makefile.MacOSX</span><br></pre></td></tr></table></figure><p>然后你就会得到一个新的onscripter，把它替换掉原本的onscripter，这时就可以正常显示了。</p><h2 id="Launcher"><a href="#Launcher" class="headerlink" title="Launcher"></a>Launcher</h2><p>终端开游戏还是过于生硬了，这时如果有个启动器则会使整个过程优雅许多，正好，官方也有提供的<a href="https://tmkk.undo.jp/onscripter/">启动器</a>，感觉之前的步骤全都浪费表情了…虽然是Intel不是Apple，但这种也耗不了多少电。然后，以缘之空来举例，用启动器打开会出现没有画面显示的问题，具体原因尚且不明，但解决方法还是很轻松的，找到<code>onscripter.app</code>，显示包内容，把ons-GBK中生成的onscripter替换掉原本包内的文件。<br>这下就完全体了🎉</p><p><img src="https://raw.githubusercontent.com/misaka-10201/img/main/%E6%88%AA%E5%B1%8F2023-03-17%2014.43.00.png"></p><p>于是就先推完了沙耶之歌</p><p>如果你中途爆了好多错，不要急，没必要非得ons不可，这里是<a href="https://www.maemo.cc/2017/12/18/onscripter-gbk-for-mac.html">指导文档</a>，实在搞不定，虚拟机曲线救国也不是不能用，最终目的是为了玩上🎮（看CG<br>如果只是为了看CG好像也可以直接不用推（？</p><h2 id="资源站"><a href="#资源站" class="headerlink" title="资源站"></a>资源站</h2><p>简单的都整完了，剩下这一个老大难（<br>在这存一点下载ons资源的站点吧，感觉也不是很难找，而且照我的性格估计过几天就又懒得推了吧（逃</p><p><a href="https://www.summeread.com/">夏日社</a>——部分付费，但是资源基本都能用（除了女装山脉</p><p><a href="https://soraacg.xyz/">穹の下</a>——没用过，感觉挺不错，下次注册个试试</p><p><a href="https://05fx.glitch.me/ONS%E6%B8%B8%E6%88%8F%E8%B5%84%E6%BA%90%E5%BA%93/">05</a>——全免，直下，速度还不慢，就是目前下过的只有沙耶能用（</p>]]></content>
     
@@ -347,12 +347,14 @@
     
     <category term="ACG" scheme="http://example.com/categories/ACG/"/>
     
+    <category term="Experience" scheme="http://example.com/categories/ACG/Experience/"/>
+    
+    
+    <category term="缘の空" scheme="http://example.com/tags/%E7%BC%98%E3%81%AE%E7%A9%BA/"/>
     
     <category term="Galgame" scheme="http://example.com/tags/Galgame/"/>
     
     <category term="Onscripter" scheme="http://example.com/tags/Onscripter/"/>
-    
-    <category term="缘の空" scheme="http://example.com/tags/%E7%BC%98%E3%81%AE%E7%A9%BA/"/>
     
   </entry>
   
@@ -418,7 +420,7 @@
     <link href="http://example.com/post/4a72f5c3.html"/>
     <id>http://example.com/post/4a72f5c3.html</id>
     <published>2023-02-23T14:39:52.000Z</published>
-    <updated>2024-03-23T13:40:09.271Z</updated>
+    <updated>2024-03-31T09:20:53.326Z</updated>
     
     <content type="html"><![CDATA[<p>起因可能是最近在Apple Music上听的东方的歌太多了，没事就听没事就听，然后突然想起来，正好闲的没事，原也不想原，搭方块也不想搭方块，那就不如来打飞机吧（bushi）</p><p>其实是为了听歌（确信</p><h2 id="感谢贴吧老哥"><a href="#感谢贴吧老哥" class="headerlink" title="感谢贴吧老哥"></a>感谢贴吧老哥</h2><p>这里是用到的工具或资源列表，也是真的离谱，14年的资源现在拿出来还能接着用…还得是贴吧老哥</p><ol><li>贴吧老哥分享的dmg资源：<a href="https://tieba.baidu.com/p/3378471457?red_tag=2673241057#/">链接</a></li><li>wineskin：<a href="https://github.com/Gcenx/WineskinServer">链接</a></li><li>如果你是M系列的Mac，你还需要安装一下resetta2</li><li>最好不要是最新版本操作系统（本文为Ventura13.0.1</li></ol><h2 id="获取资源"><a href="#获取资源" class="headerlink" title="获取资源"></a>获取资源</h2><p>实现原理很简单，就是在Mac上用wineskin造一个能运行exe的Windows必要环境，wineskin官方在GitHub上也指出了M系列Mac使用的注意事项。至于为什么不用crossover，首先那玩意要钱，其次，那玩意要钱，就算找到了学习版，crossover是在你的Mac环境下直接创建了一个完整的Windows环境，确实可以干很多事情，但是相应的占用资源也增多了不少。我们只是为了打车万，没必要在你的Mac上再整一台Win出来（大概</p><p>先把老哥的分享和wineskin下载下来。</p><p>老哥的分享里都是东方正作的dmg文件，可能古早一些的Mac可以直接安装运行，那就省事太多了…如果你安装后发现无法运行，正常情况，接下来是wineskin的相应配置。</p><h2 id="Wineskin"><a href="#Wineskin" class="headerlink" title="Wineskin"></a>Wineskin</h2><p>下载最新的wineskin，安装完成后再安装里面需要的Engine和wrapper version，Engine记得要符合要求，比如M1以后的版本要求就不能低于WineCX20.0.4，同时注意安装64位的。</p><p>warpper目前好像没有什么降级的方法，我这个时间点安装的version是2.9.1.5，等会会有和老版本不同的地方，但是不影响最终实现…</p><p>随后就是create new blank wrapper，但我们现在还没有东方的游戏文件，也没什么exe让wine去运行啊，正好我们安装了老哥分享的dmg，打开app的包目录，你会发现这怎么和wineskin创建的app这么相似啊（乐）</p><p>可以试着用运行wineskin application的方式来运行，通常是木大的…</p><p>打开drive_c这个目录，在Program Files里就有我们缺少的东方正作文件了，拷贝到我们自己创建的application的相同目录下面，同时可以看一下原本运行的是哪个exe文件，配置好启动路径后，test run一下，第一次可能会报错等等，别慌，再test一次，大概就ok了，开始苦手（</p><h2 id="一些（小）问题"><a href="#一些（小）问题" class="headerlink" title="一些（小）问题"></a>一些（小）问题</h2><p>新老版本wrappar可能会导致app的启动画面里没有一个screen的选项，并没有什么影响，可能是先前需要手动配置的一些在新版本里更新成自动了吧（笑</p><p>如果你在车万的贴吧里已经下载好了exe文件，我并不是很推荐使用，在同样的条件下，dmg文件里扒出来的东方可以正常运行，而下载的exe版本总是莫名其妙的报错…要不是报错我也不至于去扒人家包里的文件</p><p><strong>东方的音乐真好听！</strong></p>]]></content>
     
@@ -434,6 +436,8 @@
     
     <category term="ACG" scheme="http://example.com/categories/ACG/"/>
     
+    <category term="Experience" scheme="http://example.com/categories/ACG/Experience/"/>
+    
     
     <category term="wineskin" scheme="http://example.com/tags/wineskin/"/>
     
@@ -446,7 +450,7 @@
     <link href="http://example.com/post/eeedc6e3.html"/>
     <id>http://example.com/post/eeedc6e3.html</id>
     <published>2023-02-23T14:06:21.000Z</published>
-    <updated>2024-03-23T13:39:44.072Z</updated>
+    <updated>2024-03-31T09:18:20.421Z</updated>
     
     <content type="html"><![CDATA[<h2 id="突然色色（不是"><a href="#突然色色（不是" class="headerlink" title="突然色色（不是"></a>突然色色（不是</h2><p>昨天晚上突然看到电报群里发了哔咔企业版签名的链接，看过什么都不用操作就能直接安装后便果断安装了（喜<br>第一次在iPhone上看哔咔还是在第一代se上，用的TestFlight，当时感觉非常的奇妙。现在换成了只比se大一小圈的13mini，看起来就是当时那个味。<br>然后过了没一个小时，证书寄了（笑。</p><p>于是便打算用自签，虽然需要七天一续比较麻烦，但至少比等企业签要好，能用毕竟。</p><p>其实早就看到了哔咔上自签的教程，当时觉得无所谓，又不是必须看漫画，还有七天的期限，又是需要越狱什么的，就没弄。</p><p>现在看了看，爱思据说寄的签不上，剩下的基本都是不需越狱的路子，于是就中午整了一下，挺顺利的，就是踩了点小坑…</p><hr><p>确实没什么好搞的，感觉应该也没什么坑，我基本应该都踩了…<br>这里是<a href="http://picawiki.xyz/category/ios/">官方指导文档</a>，全面多了…<br>下面是个人踩了的坑与较详细安装过程（逃</p><hr><h2 id="事先准备"><a href="#事先准备" class="headerlink" title="事先准备"></a>事先准备</h2><p>大体步骤如下：</p><ol><li>准备好哔咔的ipa文件</li><li>自己的Apple ID和密码</li><li><a href="https://pangu8.com/sideloadly/">sideloadly</a></li><li>安装</li><li>色色，启动！</li></ol><h2 id="Sideloadly"><a href="#Sideloadly" class="headerlink" title="Sideloadly"></a>Sideloadly</h2><p>安装完可能会有这么一个error：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Local Anisette init fail: Sideloadly&#x27;s Local Anisette Mail Plug-in was installed but seemingly not enabled. Please open Mail application...</span><br></pre></td></tr></table></figure><p>救不了了就简单手打一点吧</p><p>其实懂英语的看看就知道，只需要在 邮件&gt;偏好设置&gt;通用&gt;管理插件 里面勾选上就解决了（算个小坎？</p><p>接下来登录Apple ID时有可能会提示错误代码36607</p><p>官方给的解决方案是：前往 <a href="https://appleid.apple.com【设备】选项，找到你的设备将其移除，然后再添加一遍。但是在评论区里官方的说法却是：有的Apple">https://appleid.apple.com【设备】选项，找到你的设备将其移除，然后再添加一遍。但是在评论区里官方的说法却是：有的Apple</a> ID就这样，多试几次，看运气（</p><p>目前来看，我把邮件插件勾完后还没有遇到这样的情况，可能是运气好吧（勾之前遇到不少次…</p><p>基本到这，只要你是从官网下载的最新版的sideloadly，基本就没什么会遇到的坑了（有就去看官方文档</p><p>它甚至还有备用的altserver（还没用过，是需要再安装到iPhone上，从iPhone上签名，多个软件，不喜欢</p><h2 id="个人设备"><a href="#个人设备" class="headerlink" title="个人设备"></a>个人设备</h2><p>接下来就是要安装到自己iPhone上了：</p><ol><li>确保sideloadly识别出了你的设备。</li><li>最新版不用改Advanced options。</li><li>Apple ID是手机号记得加86（真的有人不知道这个</li><li>如果你更新到了iOS16，还要打开开发者模式，在隐私里（不开不影响安装，但是影响使用</li><li>安装完成后，是打不开的，需要去 通用&gt;VPN与设备管理 里面添加信任（我信任我自己</li><li>然后就可以开始打哔咔了。记得每七天更新一次</li></ol><hr><h2 id="Bika-ipa"><a href="#Bika-ipa" class="headerlink" title="Bika.ipa"></a>Bika.ipa</h2><p>目前是只在tg群里看见了下载链接，<a href="https://cnpica.xyz/">官网</a>上应该也有，不过我直接就用群里的了，这里是以前的版本（<a href="https://hddd.lanzouv.com/b00zvf6mf">阵亡大军</a></p><p>如果你安装好后打开无法加载，可以试试再装个禁漫（个人感觉禁漫比哔咔好用（小声</p><p>-_o</p><h2 id="其他好东西"><a href="#其他好东西" class="headerlink" title="其他好东西"></a>其他好东西</h2><p><a href="https://18comic.vip/ios_app/">禁漫</a><br><a href="https://wwp.lanzoul.com/iZrBs08cs0ti">OmoFun</a></p>]]></content>
     
@@ -459,6 +463,8 @@
     
     
     <category term="ACG" scheme="http://example.com/categories/ACG/"/>
+    
+    <category term="Experience" scheme="http://example.com/categories/ACG/Experience/"/>
     
     
     <category term="bika" scheme="http://example.com/tags/bika/"/>
@@ -476,7 +482,7 @@
     <link href="http://example.com/post/82e04830.html"/>
     <id>http://example.com/post/82e04830.html</id>
     <published>2023-02-17T19:07:58.000Z</published>
-    <updated>2024-03-23T12:52:37.338Z</updated>
+    <updated>2024-03-31T09:17:41.477Z</updated>
     
     <content type="html"><![CDATA[<p>由于网站遭受到了管理人的错误处理，珍贵资源未能得以保留，鲁迅说过，网站不能空无一文（？，故水文一篇，赖以充数（逃</p><h2 id="部署前准备"><a href="#部署前准备" class="headerlink" title="部署前准备"></a>部署前准备</h2><ul><li>科学上网</li><li>能不用Mac就不用Mac</li><li>做好看鬼图的心理准备（确信</li></ul><h2 id="ml-SD"><a href="#ml-SD" class="headerlink" title="ml-SD"></a>ml-SD</h2><p>本来事先是想着直接上SD的，但找参考时看到了ml-SD的<a href="https://blog.csdn.net/soulteary/article/details/128269466">部署指南</a>，本着走前人走过的路的精神，就先试试ml-SD吧</p><p>客观来说，ml-SD在Mac上是要比SD有足够的优势的，毕竟是Apple改过的能动用M系列GPU的，比后面部署的SD-webui单纯用CPU搁那里算可快太多了，苦于不会写ui（fvv没有去看，摆烂人实锤），在实际使用方面还是webui更舒适一些。</p><h3 id="Conda安装"><a href="#Conda安装" class="headerlink" title="Conda安装"></a>Conda安装</h3><p>到<a href="https://repo.anaconda.com/archive/">Conda官网</a>或<a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/">镜像站</a>下载，下载完后执行安装，建议用<code>vi ~/.condarc</code>对其进行换源，保护后面下载时不至于血压升高（</p><p>在完成 Conda 的安装之后，我们就可以用它来快速的创建不影响本地机器环境，只和项目关联的干净的 Python 运行环境了。</p><h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">conda create -n coreml_stable_diffusion python=3.8 -y</span><br><span class="line">//初始化环境</span><br><span class="line">conda activate coreml_stable_diffusion</span><br><span class="line">//启动</span><br><span class="line">pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line">//安装程序依赖的软件包</span><br></pre></td></tr></table></figure><h3 id="项目初始化"><a href="#项目初始化" class="headerlink" title="项目初始化"></a>项目初始化</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/apple/ml-stable-diffusion.git</span><br><span class="line">//拉库</span><br><span class="line">cd ml-stable-diffusion</span><br><span class="line">pip install -r requirements.txt</span><br><span class="line">//安装依赖</span><br></pre></td></tr></table></figure><h3 id="模型转换"><a href="#模型转换" class="headerlink" title="模型转换"></a>模型转换</h3><p>现在我们有跑的环境了，缺少点来跑的model，上Huggingface注册一个账号，获取token后利用token登录，这样我们就可以从Huggingface上下载model了。和SD不一样，ml-SD好像只能运行转换格式后的model，我们需要转换 Huggingface 上的 PyTorch &#x2F; TF 开放模型到 Apple Core ML 模型格式</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python -m python_coreml_stable_diffusion.torch2coreml --convert-unet --convert-text-encoder --convert-vae-decoder --convert-safety-checker -o ./models</span><br><span class="line">//默认下载CompVis/stable-diffusion-v1-4，如若想用其他模型，可自行添加--model-version参数</span><br></pre></td></tr></table></figure><h3 id="生成图片及参数录入优化"><a href="#生成图片及参数录入优化" class="headerlink" title="生成图片及参数录入优化"></a>生成图片及参数录入优化</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python -m python_coreml_stable_diffusion.pipeline --prompt &quot;magic book on the table&quot; -i ./models -o ./output --compute-unit ALL --seed 93</span><br><span class="line">//画一本桌子上的魔法书</span><br></pre></td></tr></table></figure><p>我们可以用gradio来创建一个 Web 界面，把 ML Stable Diffusion 的图片生成和 Web 界面“绑定”到一起（但不想看了，就没有后续力</p><h3 id="感觉，快了，也没快多少（bushi"><a href="#感觉，快了，也没快多少（bushi" class="headerlink" title="感觉，快了，也没快多少（bushi"></a>感觉，快了，也没快多少（bushi</h3><p><img src="https://raw.githubusercontent.com/misaka-10201/img/main/00006-550923006.png"></p><p>真不戳（赞赏</p><h2 id="Stable-Diffusion-webui"><a href="#Stable-Diffusion-webui" class="headerlink" title="Stable-Diffusion-webui"></a>Stable-Diffusion-webui</h2><p>在玩了几次ml-SD后，愈发感觉指南里的web过于直白，给不了多少自由度，自己又不想自己写，于是便决定用现成的webui，正好<a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Installation-on-Apple-Silicon">官方文档</a>里也有对Apple单独的部署指导，实际部署起来感觉比ml-SD更顺畅（？</p><h3 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">brew install cmake protobuf rust python@3.10 git wget</span><br><span class="line">//前置依赖</span><br><span class="line">git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui</span><br><span class="line">//拉库</span><br><span class="line">//放置下载的模型</span><br><span class="line">cd stable-diffusion-webui</span><br><span class="line">./webui.sh</span><br><span class="line">//运行</span><br></pre></td></tr></table></figure><p>事先装好Homebrew</p>]]></content>
     
@@ -490,6 +496,8 @@
     
     
     <category term="ACG" scheme="http://example.com/categories/ACG/"/>
+    
+    <category term="Experience" scheme="http://example.com/categories/ACG/Experience/"/>
     
     
     <category term="ml-stable-diffusion" scheme="http://example.com/tags/ml-stable-diffusion/"/>
